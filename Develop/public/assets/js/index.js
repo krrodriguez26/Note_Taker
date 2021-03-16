@@ -1,3 +1,25 @@
+const { Console } = require('console');
+const express = require('express');
+const path = require('path');
+
+// Express App set-up
+const app = express();
+const port = 3000;
+
+//Route
+app.get('/',(req,res)=> {
+    res.send('Welcome to the Note Taker App')
+});
+
+app.listen(PORT, ()=>{
+    Console.log('App is listening on ${PORT}')
+})
+
+
+
+
+
+
 let noteTitle;
 let noteText;
 let saveNoteBtn;
