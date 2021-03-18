@@ -13,33 +13,6 @@ if (window.location.pathname === '/notes') {
   noteList = document.querySelectorAll('.list-container .list-group');
 }
 
-const activeNote = {};
-
-// A function for getting all notes from the db
-var getNotes = function() {
-  return $.ajax({
-    url: "/api/notes",
-    method: "GET"
-  });
-};
-
-// A function for saving a note to the db
-var saveNote = function(note) {
-  return $.ajax({
-    url: "/api/notes",
-    data: note,
-    method: "POST"
-  });
-};
-
-// A function for deleting a note from the db
-var deleteNote = function(id) {
-  return $.ajax({
-    url: "api/notes/" + id,
-    method: "DELETE"
-  })
-};
-
 // Show an element
 const show = (elem) => {
   elem.style.display = 'inline';
