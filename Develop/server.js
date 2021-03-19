@@ -18,7 +18,7 @@ app.get("/", function (req, res) {
 
 // Notes html and it's "url"
 app.get("./notes", function (req, res) {
-    res.sendFile(path.join(__dirname, "/public/notes.html"));
+    res.sendFile(path.join(__dirname, "/Develop/notes.html"));
 })
 
 //Route
